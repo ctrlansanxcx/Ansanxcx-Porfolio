@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>New Contact Form Message</title>
+    <style>
+      body {
+        font-family: 'Arial', sans-serif;
+        background: #f9f9f9;
+        color: #333;
+        margin: 0;
+        padding: 20px;
+      }
+      .container {
+        max-width: 600px;
+        margin: auto;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        padding: 20px;
+      }
+      h2 {
+        color: white;
+        text-align: center;
+      }
+      p {
+        font-size: 16px;
+      }
+      hr {
+        border: none;
+        border-top: 1px solid #eee;
+        margin: 20px 0;
+      }
+      .footer {
+        font-size: 12px;
+        text-align: center;
+        color: #aaa;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>New Contact Form Message</h2>
+      <p><strong>Name:</strong> {{firstName}} {{lastName}}</p>
+      <p><strong>Email:</strong> {{email}}</p>
+      <p><strong>Subject:</strong> {{subject}}</p>
+      <hr />
+      <p><strong>Message:</strong></p>
+      <p>{{message}}</p>
+      <hr />
+      <p class="footer">
+        This message was sent from your website contact form.
+      </p>
+    </div>
+  </body>
+</html>
