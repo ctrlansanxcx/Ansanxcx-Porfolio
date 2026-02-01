@@ -70,19 +70,7 @@ class HeroSection extends StatelessWidget {
                       child: Column(
                         children: [
                           _buildDescriptionText(
-                            'I am John Tristan Ballesteros currently pursuing a bachelor\'s degree in',
-                            isMobile,
-                          ),
-                          _buildDescriptionText(
-                            'information technology majoring in mobile and web applications.',
-                            isMobile,
-                          ),
-                          _buildDescriptionText(
-                            'Experienced in project management and software development.',
-                            isMobile,
-                          ),
-                          _buildDescriptionText(
-                            'Passionate about technology, teamwork, and learning new things.',
+                            'I am John Tristan Ballesteros currently pursuing a bachelor\'s degree in information technology majoring in mobile and web applications. Experienced in data analytics, project management, and software development. Passionate about technology, teamwork, and learning new things. Feel free to explore my portfolio and reach out for collaboration or opportunities.',
                             isMobile,
                           ),
                         ],

@@ -16,9 +16,26 @@ class _AchievementsSectionState extends State<AchievementsSection> {
     Achievement(
       title: 'Fortinet Certified Fundamentals in Cybersecurity',
       organization: 'Fortinet Training Institute',
+      id: '',
       description:
           'Gained foundational knowledge in cybersecurity principles and practices.',
       year: 'May 16, 2025 - May 16, 2027',
+    ),
+    Achievement(
+      title: 'Power BI for Beginners',
+      organization: 'SkillUp by Simplilearn',
+      id: '9680519',
+      description:
+          'Gained foundational knowledge in Power BI and data visualization.',
+      year: 'January 5, 2026',
+    ),
+    Achievement(
+      title: 'Introduction to Data Analytics Course',
+      organization: 'SkillUp by Simplilearn',
+      id: '9687104',
+      description:
+          'Gained foundational knowledge in data analytics concepts and tools.',
+      year: 'January 7, 2026',
     ),
   ];
 
@@ -245,12 +262,14 @@ class Achievement {
   final String title;
   final String organization;
   final String description;
+  final String id;
   final String year;
 
   Achievement({
     required this.title,
     required this.organization,
     required this.description,
+    required this.id,
     required this.year,
   });
 }

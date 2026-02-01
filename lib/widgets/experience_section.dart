@@ -12,6 +12,13 @@ class ExperienceSection extends StatelessWidget {
       description:
           'Editor in charge in our school ID, yearbook, school tarpaulin, and informercial. Distributer of school materials and hygiene kits.',
     ),
+    Experience(
+      role: 'Data Analytics Intern',
+      company: 'Skyworth Philippines Corporation',
+      period: 'November 2025 - February 2026',
+      description:
+          'Assisted in data collection, cleaning, promoters billing and incentive forms, excel formula cleaning, and analysis for various projects and reports. Created reports and excel visualizations to support decision-making processes. Collaborated with team members to improve data management practices. Learned and applied data analytics tools and techniques in a real-world setting.',
+    ),
   ];
 
   @override

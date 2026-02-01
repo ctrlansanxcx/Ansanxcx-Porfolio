@@ -119,7 +119,16 @@ class AboutMeSection extends StatelessWidget {
         ),
         const SizedBox(height: 20),
         Text(
-          'I served as the project manager and lead developer of Maduro, a fruit ripeness detection system that integrates machine learning and Flutter. I was responsible for backend integration, Firebase authentication, and AI model deployment. Let’s connect and build something amazing together!',
+          'I served as the project manager and lead developer of Maduro, a fruit ripeness detection system that integrates machine learning and Flutter. I was responsible for backend integration, Firebase authentication, and AI model deployment.',
+          style: GoogleFonts.tomorrow(
+            fontSize: isMobile ? 14 : 16,
+            height: 1.8,
+            color: Colors.black.withOpacity(0.7),
+          ),
+        ),
+        const SizedBox(height: 20),
+        Text(
+          'With a foundation in data analytics, I have honed my skills in data collection, cleaning, visualization, and reporting through hands-on experience during my internship at Skyworth Philippines Corporation. I am experienced in Excel, and basic VBA Macros, and Power BI tools, enabling me to derive actionable insights from complex datasets. I am passionate about leveraging data to drive informed decision-making and contribute to organizational success. I developed a Incentive Form Automation System that streamlines the preparation of dealer incentive forms, significantly reducing processing time from days to just 30–60 minutes. Let’s connect and build something amazing together!',
           style: GoogleFonts.tomorrow(
             fontSize: isMobile ? 14 : 16,
             height: 1.8,
@@ -127,13 +136,13 @@ class AboutMeSection extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 40),
-        _buildSkillRow('UI/UX Design', 0.40, isMobile),
+        _buildSkillRow('Data Analytics and Visualization', 0.80, isMobile),
         const SizedBox(height: 20),
-        _buildSkillRow('Project Management', 0.90, isMobile),
+        _buildSkillRow('Project Management', 0.75, isMobile),
         const SizedBox(height: 20),
-        _buildSkillRow('Backend Development', 0.75, isMobile),
+        _buildSkillRow('Backend Development', 0.65, isMobile),
         const SizedBox(height: 20),
-        _buildSkillRow('Cybersecurity', 0.60, isMobile),
+        _buildSkillRow('Cybersecurity', 0.50, isMobile),
       ],
     );
   }
@@ -224,11 +233,13 @@ class AboutMeSection extends StatelessWidget {
                     ]),
                     const SizedBox(height: 30),
                     _buildSkillCategory(context, 'Tools & Others', [
-                      'Git',
+                     'Git',
                       'Figma',
                       'AWS',
                       'Firebase',
                       'Canva',
+                      'Excel',
+                      'VBA Macro',
                     ]),
                   ],
                 );
@@ -264,6 +275,8 @@ class AboutMeSection extends StatelessWidget {
                         'AWS',
                         'Firebase',
                         'Canva',
+                        'Excel',
+                        'VBA Macro',
                       ]),
                     ),
                   ],
@@ -304,6 +317,7 @@ class AboutMeSection extends StatelessWidget {
                       description:
                           'An AI-based mobile and web app that detects fruit ripeness using machine learning and image processing.',
                       position: 'Project Manager & Mobile Developer',
+                      organization: 'National University - Manila',
                       tags: [
                         'Flutter',
                         'Firebase',
@@ -321,6 +335,7 @@ class AboutMeSection extends StatelessWidget {
                       description:
                           'A personal portfolio website showcasing my projects, skills, and design sense. ',
                       position: 'Developer',
+                      organization: 'Personal Project',
                       tags: [
                         'Flutter',
                         'Firebase',
@@ -330,6 +345,22 @@ class AboutMeSection extends StatelessWidget {
                         'Responsive',
                       ],
                       imageUrl: 'assets/images/website.png',
+                    ),
+                    const SizedBox(height: 30),
+                    _buildProjectCard(
+                      title: 'Automated Incentive Form System',
+                      description:
+                          'The Automated Incentive Form System is a Flutter Windows app with a Python backend that streamlines dealer incentive form preparation. It duplicates format workbooks, inserts model quantities, and organizes outputs into folders by Dealer, Month, Year, and Branch Code. With built-in VBA macros for compilation and sorting, the system reduces a process that once took days into just 30–60 minutes, ensuring accuracy and scalability for handling hundreds of branches efficiently.',
+                      position: 'Developer',
+                      organization:'Skyworth Philippines Corporation',
+                      tags: [
+                        'Flutter',
+                        'MongoDB',
+                        'Windows',
+                        'Python',
+                        'Excel',
+                      ],
+                      imageUrl: 'assets/images/incentive.png',
                     ),
                   ],
                 )
@@ -341,6 +372,7 @@ class AboutMeSection extends StatelessWidget {
                         description:
                             'A mobile and web application that detects fruit ripeness - especially Banana - using MobileNetv2 with integration of Gemini AI. We develope this project using Flutter for cross-platform development and Firebase for backend services. The ML model is built with Python and TensorFlow, utilizing image processing techniques to ensure accurate ripeness detection. Gemini AI is integrated to provide recommendations based on the detected ripeness level.',
                         position: 'Project Manager & Mobile Developer',
+                        organization: 'National University - Manila',
                         tags: [
                           'Flutter',
                           'Firebase',
@@ -360,6 +392,7 @@ class AboutMeSection extends StatelessWidget {
                         description:
                             'A personal portfolio website showcasing my projects, skills, and design sense. Using flutter for web to create a responsive and visually appealing layout, and Firebase for hosting and backend services. The website highlights my expertise in mobile and web application development, UI/UX design, and project management. It serves as a platform to connect with potential collaborators and employers.',
                         position: 'Developer',
+                        organization: 'Personal Project',
                         tags: [
                           'Flutter',
                           'Firebase',
@@ -369,6 +402,25 @@ class AboutMeSection extends StatelessWidget {
                           'Responsive',
                         ],
                         imageUrl: 'assets/images/website.png',
+                      ),
+                    ),
+                    const SizedBox(width: 50),
+                    Expanded(
+                      child: _buildProjectCard(
+                        title: 'Automated Incentive Form System',
+                        
+                        description:
+                            'The Automated Incentive Form System is a Flutter Windows app with a Python backend that streamlines dealer incentive form preparation. It duplicates format workbooks, inserts model quantities, and organizes outputs into folders by Dealer, Month, Year, and Branch Code. With built-in VBA macros for compilation and sorting, the system reduces a process that once took days into just 30–60 minutes, ensuring accuracy and scalability for handling hundreds of branches efficiently.',
+                        position: 'Developer',
+                        organization:'Skyworth Philippines Corporation',
+                        tags: [
+                          'Flutter',
+                          'MongoDB',
+                          'Windows',
+                          'Python',
+                          'Excel',
+                        ],
+                        imageUrl: 'assets/images/incentive.png',
                       ),
                     ),
                   ],
@@ -590,7 +642,8 @@ class AboutMeSection extends StatelessWidget {
     required String description,
     required String position,
     required List<String> tags,
-    required String imageUrl,
+    required String imageUrl, 
+    required String organization,
   }) {
     bool isNetworkImage = imageUrl.startsWith('http');
 
@@ -631,6 +684,15 @@ class AboutMeSection extends StatelessWidget {
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                     color: Colors.black,
+                  ),
+                ),
+                const SizedBox(height: 10),
+                Text(
+                  organization,
+                  style: GoogleFonts.tomorrow(
+                    fontSize: 13,
+                    fontWeight: FontWeight.w600,
+                    color: Colors.black.withOpacity(0.7),
                   ),
                 ),
                 const SizedBox(height: 10),
